@@ -11,18 +11,18 @@
           <div class="contenedor">
                <h1>Contacto</h1>
                <div class="contenedor-contenido">
-                    <label>Nombre</label>
-                    <input name="nombre" id="nombre"/>
-                    <label>Apellido</label>
-                    <input name="apellido" id="apellido"/>
-                    <label>DNI</label>
-                    <input name="DNI" id="DNI"/>
-                    <label>Email</label>
-                    <input name="Email" id="Email"/>
-                    <label>Teléfono</label>
-                    <input name="Telefono" id="Telefono"/>
-                    <label>Tipo de Seguro</label>
-                    <select id="TipoSeguro" onchange="mostrarPrecio();">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre"/>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido" id="apellido"/>
+                    <label for="DNI">DNI</label>
+                    <input type="text" name="DNI" id="DNI"/>
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email"/>
+                    <label for="telefono">Teléfono</label>
+                    <input type="text" name="telefono" id="telefono"/>
+                    <label for="tipoSeguro">Tipo de Seguro</label>
+                    <select id="tipoSeguro" onchange="mostrarPrecio();">
                          <option value="0">Seleccionar</option>
                          <option value="500">Básico</option>
                          <option value="750">Intermedio</option>
