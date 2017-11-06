@@ -11,3 +11,9 @@
   En esta unidad vemos lo nuevo en HTML, el estándar HTML 5.  También vamos a conocer sus principales funcionalidades y ventajas. Debemos recordar que IONIC (el framework elegido para el desarrollo de aplicaciones móviles) está basado en este estándar.
 
   Por otro lado, incursionamos en la utilización de AJAX (Asynchronous JavaScript And XML), el cual es una técnica de programación web para crear aplicaciones RIA (Rich Internet Applications).
+
+#Unidad 3 - IONIC Instalación y “Hola mundo”
+
+  En la presente unidad nos instalaremos IONIC 2 framework.
+  Para poder proceder con su instalación deberemos instalar Node JS.
+  Una vez que tengamos todo el entorno instalado procederemos a realizar nuestra primer aplicación con IONIC 2.
