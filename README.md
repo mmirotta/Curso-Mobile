@@ -12,7 +12,7 @@
 
   Por otro lado, incursionamos en la utilización de AJAX (Asynchronous JavaScript And XML), el cual es una técnica de programación web para crear aplicaciones RIA (Rich Internet Applications).
 
-#Unidad 3 - IONIC Instalación y “Hola mundo”
+# Unidad 3 - IONIC Instalación y “Hola mundo”
 
   En la presente unidad nos instalaremos IONIC 2 framework.
   Para poder proceder con su instalación deberemos instalar Node JS.
