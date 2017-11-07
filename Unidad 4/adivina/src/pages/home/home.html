@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="text-align:center">
+      Adivina el número secreto
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div [hidden]="juegoNuevo">
+      <button ion-button block (click)="nuevoJuego()">
+        Jugar
+      </button>
+  </div>
+  <div [hidden]="juego">
+    <h4>Introduce un número del 1 al 100</h4>
+    <ion-input type="number" min="1" max="100" [(ngModel)]="num" style="font-size:70px"></ion-input>
+    <p>El número secreto es {{mayorMenor}}  </p>
+    <button ion-button block (click)="compruebaNumero()">
+      Adivina
+    </button>
+
+    <p>Te quedan {{intentosRestantes}} intentos.  </p>
+  </div>
+  <div [hidden]="resultado">
+    <h1>Haz {{resultadoJuego}} en {{intentos}} intentos. <br>El número secreto era {{numSecret}}. </h1>
+    <button ion-button block (click)="nuevoJuego()">
+      Juego Nuevo
+    </button>
+  </div>
+</ion-content>
