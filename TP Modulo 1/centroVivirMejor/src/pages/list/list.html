@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Ingreso Consumo</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label color="primary" stacked style="font-size: 1.3rem">Fecha Consumo</ion-label>
+    <ion-datetime displayFormat="DD/MMM/YYYY HH:MM" [(ngModel)]="fechaConsumo"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" stacked style="font-size: 1.3rem">Alimento Consumido</ion-label>
+    <ion-input type="text" [(ngModel)]="alimento"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" stacked style="font-size: 1.3rem">Estado de ánimo</ion-label>
+    <ion-select [(ngModel)]="estado" cancelText="Cerrar" color="secondary" style="max-width:100%; width:100%">
+      <ion-option [value]="0">Seleccionar..</ion-option>
+      <ion-option [value]="1">Fastidioso</ion-option>
+      <ion-option [value]="2">Contento</ion-option>
+      <ion-option [value]="3">Deprimido</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" stacked style="font-size: 1.3rem">Tipo de alimento</ion-label>
+    <ion-select [(ngModel)]="tipo" cancelText="Cerrar"  style="max-width:100%; width:100%">
+      <ion-option [value]="0">Seleccionar..</ion-option>
+      <ion-option [value]="1">Desayuno</ion-option>
+      <ion-option [value]="2">Almuerzo</ion-option>
+      <ion-option [value]="3">Merienda</ion-option>
+      <ion-option [value]="4">Cena</ion-option>
+      <ion-option [value]="5">Colación</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-footer>
+    <ion-toolbar style="text-align: right">
+      <button ion-button round color="secondary" (click)="IngresarConsumo()">Aceptar</button>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>
