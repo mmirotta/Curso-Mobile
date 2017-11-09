@@ -15,11 +15,15 @@
 # Unidad 3 - IONIC Instalación y “Hola mundo”
 
   En la presente unidad nos instalaremos IONIC 2 framework.
+
   Para poder proceder con su instalación deberemos instalar Node JS.
+
   Una vez que tengamos todo el entorno instalado procederemos a realizar nuestra primer aplicación con IONIC 2.
 
 # Unidad 4 - IONIC Estructura de directorio
 
   En la presente unidad nos instalaremos IONIC framework.
+
   Para realizar su instalación debemos instalar Java JDK, Node y la SDK de android.
+  
   A continuación te encontraras con un mini tutorial paso a paso sobre las aplicaciones antes mencionadas.
