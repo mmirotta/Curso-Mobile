@@ -29,3 +29,19 @@
     transform: translateZ(0);
     pointer-events: none;
   }
+
+  .fondo{
+    background: url(../assets/imgs/fondoHome.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.9;
+  }
+
+  .titulo{
+    margin: 0 auto;
+    color:#fff;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+  }
