@@ -27,3 +27,9 @@
   Para realizar su instalación debemos instalar Java JDK, Node y la SDK de android.
   
   A continuación te encontraras con un mini tutorial paso a paso sobre las aplicaciones antes mencionadas.
+
+# Unidad 5 - IONIC Generator
+
+  En la presente unidad comenzaremos a desarrollar nuestra primera aplicación.
+  Para realizar un desarrollo más rápido, utilizaremos las facilidades que nos propone ionic
+  a través de IONIC generator.
