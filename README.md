@@ -33,3 +33,9 @@
   En la presente unidad comenzaremos a desarrollar nuestra primera aplicación.
   Para realizar un desarrollo más rápido, utilizaremos las facilidades que nos propone ionic
   a través de IONIC generator.
+
+# Unidad 6 - IONIC 2 componentes y mas IONIC generator
+
+En la presente unidad analizamos la documentación disponible en la página de IONIC.
+Trabajamos con sus componentes y directivas para, de esa manera, mejorar nuestra
+aplicación.
