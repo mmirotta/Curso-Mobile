@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Login</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="informacion()">
+        <ion-icon name="information-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div style="width:100%; text-align: center">
+    <ion-img width="100" height="100" src="../assets/imgs/fondoHome.png"></ion-img>
+  </div>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label color="primary" floating>Email</ion-label>
+        <ion-input type="text" [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>Clave</ion-label>
+        <ion-input type="password" [(ngModel)]="clave"></ion-input>
+      </ion-item>
+      <ion-item>
+      </ion-item>
+      <button ion-button full color="secondary" (click)="ingresar()">Aceptar</button>
+    </ion-card-content>
+  </ion-card>
+  <ion-footer class="informacion">
+    Para conocer email y clave haz click en <ion-icon name="information-circle"></ion-icon> 
+  </ion-footer>
+</ion-content>

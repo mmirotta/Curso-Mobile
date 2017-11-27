@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { InicioPage } from '../inicio/inicio';
 import { MisCursosPage } from '../mis-cursos/mis-cursos';
 import { ContactoPage } from '../contacto/contacto';
+import { RegistroPage } from '../registro/registro';
 
 
 /**
@@ -21,7 +22,7 @@ export class MisTabsPage {
   inicioRoot = InicioPage;
   misCursosRoot = MisCursosPage;
   contactoRoot = ContactoPage;
-
+  registroRoot = RegistroPage;
 
   constructor(public navCtrl: NavController) {}
 

@@ -10,6 +10,8 @@ import { InicioPage } from '../pages/inicio/inicio';
 import { MisCursosPage } from '../pages/mis-cursos/mis-cursos';
 import { ContactoPage } from '../pages/contacto/contacto';
 import { QuienesSomosPage } from '../pages/quienes-somos/quienes-somos';
+import { LoginPage } from '../pages/login/login';
+import { RegistroPage } from '../pages/registro/registro';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { QuienesSomosPage } from '../pages/quienes-somos/quienes-somos';
     InicioPage,
     MisCursosPage,
     ContactoPage,
-    QuienesSomosPage
+    QuienesSomosPage,
+    LoginPage,
+    RegistroPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,9 @@ import { QuienesSomosPage } from '../pages/quienes-somos/quienes-somos';
     InicioPage,
     MisCursosPage,
     ContactoPage,
-    QuienesSomosPage
+    QuienesSomosPage,
+    LoginPage,
+    RegistroPage
   ],
   providers: [
     StatusBar,
