@@ -12,6 +12,7 @@ import { ContactoPage } from '../pages/contacto/contacto';
 import { QuienesSomosPage } from '../pages/quienes-somos/quienes-somos';
 import { LoginPage } from '../pages/login/login';
 import { RegistroPage } from '../pages/registro/registro';
+import { CursoPage } from '../pages/curso/curso';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RegistroPage } from '../pages/registro/registro';
     ContactoPage,
     QuienesSomosPage,
     LoginPage,
-    RegistroPage
+    RegistroPage,
+    CursoPage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { RegistroPage } from '../pages/registro/registro';
     ContactoPage,
     QuienesSomosPage,
     LoginPage,
-    RegistroPage
+    RegistroPage,
+    CursoPage
   ],
   providers: [
     StatusBar,

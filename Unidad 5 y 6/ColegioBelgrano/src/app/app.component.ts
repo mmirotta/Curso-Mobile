@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { MisTabsPage } from '../pages/mis-tabs/mis-tabs';
 import { LoginPage } from '../pages/login/login';
 import { RegistroPage } from '../pages/registro/registro';
+import { MisCursosPage } from '../pages/mis-cursos/mis-cursos';
 
 @Component({
   templateUrl: 'app.html'

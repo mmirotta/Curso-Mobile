@@ -1,5 +1,5 @@
 <!--
-  Generated template for the MisCursosPage page.
+  Generated template for the CursoPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -7,56 +7,57 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>Mis Cursos</ion-title>
+    <ion-title>Curso</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content class="fondo">
+<ion-content padding class="fondo">
   <ion-card>
     <ion-card-content>
-      <ion-grid class="grilla">
-        <ion-row class="grillaHeader">
+      <ion-grid class="grillaCurso">
+        <ion-row class="grillaCentrar">
           <ion-col>
-            Curso
+            Juan Perez
           </ion-col>
+        </ion-row>
+        <ion-row>
           <ion-col>
-            Año
+            Notas
           </ion-col>
-          <ion-col>
-            Alumnos
-          </ion-col>
-          <ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-1>
             
           </ion-col>
-        </ion-row>
-        <ion-row>
           <ion-col>
-            Curso 1
+            Evaluación
           </ion-col>
           <ion-col>
-            2017
-          </ion-col>
-          <ion-col>
-            5
-          </ion-col>
-          <ion-col class="botonGrilla">
-              <ion-icon name="md-eye" color="primary" [navPush]="curso"></ion-icon>
+            8
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col>
-            Curso 2
+          <ion-col col-1>
+                
           </ion-col>
           <ion-col>
-            2016
+            TP
           </ion-col>
           <ion-col>
-            6
+            7
           </ion-col>
-          <ion-col class="botonGrilla">
-            <ion-icon name="md-eye" color="primary" [navPush]="curso"></ion-icon>
+        </ion-row>
+        <ion-row>
+          <ion-col col-1>
+                
+          </ion-col>
+          <ion-col>
+            Promedio
+          </ion-col>
+          <ion-col>
+            8
           </ion-col>
         </ion-row>
       </ion-grid>
