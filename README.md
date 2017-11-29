@@ -36,6 +36,10 @@
 
 # Unidad 6 - IONIC 2 componentes y mas IONIC generator
 
-En la presente unidad analizamos la documentación disponible en la página de IONIC.
-Trabajamos con sus componentes y directivas para, de esa manera, mejorar nuestra
-aplicación.
+  En la presente unidad analizamos la documentación disponible en la página de IONIC.
+  Trabajamos con sus componentes y directivas para, de esa manera, mejorar nuestra
+  aplicación.
+  
+# Unidad 7 - CSS Theming
+
+  En la presente unidad aprenderemos como customizar la visual de nuestra aplicación.
