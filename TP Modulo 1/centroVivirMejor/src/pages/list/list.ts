@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ToastController } from 'ionic-angular';
+import { Storage } from '@ionic/storage'
 
 @Component({
   selector: 'page-list',
@@ -7,11 +8,13 @@ import { NavController, NavParams, ToastController } from 'ionic-angular';
 })
 export class ListPage {
 
+  fechaConsumo:string = "";
+  alimento:string = "";
   estado:string = "0";
   tipo:string = "0";
   mensaje:string = "";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController, public storage: Storage) {
     var self = this; 
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
@@ -27,6 +30,17 @@ export class ListPage {
   }
 
   IngresarConsumo(){
+    let usuario = this.navParams.get('usuario');
+    let consumo = {
+      fechaConsumo: this.fechaConsumo,  
+      alimento: this.alimento,
+      estado: this.estado,
+      tipo: this.tipo,
+      usuario: usuario
+    }
+    
+    this.storage.set("ingreso" + this.fechaConsumo, JSON.stringify(consumo));
+
     let toast = this.toastCtrl.create({
       message: this.mensaje,
       duration: 3000,

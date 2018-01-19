@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { QuienesSomosPage } from '../quienes-somos/quienes-somos';
-
+import { LoginPage } from '../login/login';
+import { Storage } from '@ionic/storage'
 /**
  * Generated class for the InicioPage page.
  *
@@ -15,11 +16,18 @@ import { QuienesSomosPage } from '../quienes-somos/quienes-somos';
 })
 export class InicioPage {
   quienesSomos = QuienesSomosPage;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  login = LoginPage;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad InicioPage');
+  ngOnInit(){
+    this.storage.forEach((value, key) =>{
+      console.log("VALOR: " + value + ". CLAVE: " + key);
+    })
+  }
+
+  salir(){
+    this.navCtrl.push(this.login);
   }
 
 }

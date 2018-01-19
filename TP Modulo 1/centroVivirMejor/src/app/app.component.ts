@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { LoginPage } from '../pages/login/login';
+import { Storage } from '@ionic/storage';
 
 @Component({
   templateUrl: 'app.html'
@@ -12,11 +14,11 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = LoginPage;
 
   pages: Array<{title: string, component: any, icon: string}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public storage: Storage) {
     this.initializeApp();
 
     this.statusBar.backgroundColorByHexString("#7ea23e");
@@ -24,7 +26,8 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Inicio', component: HomePage, icon: 'home' },
-      { title: 'Ingreso Consumo', component: ListPage, icon:'arrow-round-forward' }
+      { title: 'Ingreso Consumo', component: ListPage, icon:'arrow-round-forward' },
+      { title: 'Salir', component: LoginPage, icon:'exit' }
     ];
 
   }
@@ -42,6 +45,16 @@ export class MyApp {
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+    if (page.component != LoginPage)
+    {
+      this.storage.get("logueado").then((val) =>{
+        this.nav.setRoot(page.component);
+        console.log(val);
+      });
+    }
+    else{
+      this.storage.set("logueado", "");
+      this.nav.setRoot(page.component);
+    }
   }
 }

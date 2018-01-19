@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, ToastController } from 'ionic-angular';
 import { Storage } from '@ionic/storage'
+import { LoginPage } from '../login/login';
 /**
  * Generated class for the RegistroPage page.
  *
@@ -46,11 +47,12 @@ export class RegistroPage {
         apellido: this.Apellido,
         email: this.Email,
         clave: this.Clave,
-        repitaClave:this.RepitaClave,
+        repitaClave: this.RepitaClave,
+        logueado: false
       }
 
       this.storage.set(usuario.email, JSON.stringify(usuario));
-      
+
       let toast = this.toastCtrl.create({
         message: "Registro ingresado exitosamente.",
         duration: 3000,
@@ -71,6 +73,8 @@ export class RegistroPage {
     alert.present();
   }
 
-
+  redireccionar(){
+    this.navCtrl.setRoot(LoginPage);
+  }
 
 }
