@@ -1,0 +1,47 @@
+.toolbar-content {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-ordinal-group: 5;
+    -webkit-order: 4;
+    -ms-flex-order: 4;
+    order: 4;
+    min-width: 0;
+  }
+  
+  .toolbar-title {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #000;
+    pointer-events: auto;
+  }
+  
+  .toolbar ion-title {
+    left: 0;
+    top: 0;
+    padding: 0 90px 1px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    pointer-events: none;
+  }
+
+  .fondo{
+    background: url(../assets/imgs/fondoHome.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.9;
+  }
+
+  .titulo{
+    margin: 0 auto;
+    color:#fff;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+  }
