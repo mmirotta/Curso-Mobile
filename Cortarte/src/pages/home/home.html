@@ -7,7 +7,35 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="fondo">
-  <h3 class="titulo">Vivir mejor es comer bien</h3>
-  
+<ion-content>
+    <div padding>
+        <ion-segment [(ngModel)]="pet">
+          <ion-segment-button value="servicios">
+              SERVICIOS
+          </ion-segment-button>
+          <ion-segment-button value="comentarios">
+              COMENTARIOS
+          </ion-segment-button>
+          <ion-segment-button value="informacion">
+              INFORMACIÓN
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+      
+      <div [ngSwitch]="pet">
+        <ion-list *ngSwitchCase="'servicios'">
+          <ion-item>
+          </ion-item>
+        </ion-list>
+      
+        <ion-list *ngSwitchCase="'comentarios'">
+          <ion-item>
+          </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'informacion'">
+          <ion-item>
+          </ion-item>
+        </ion-list>
+      </div>
 </ion-content>
