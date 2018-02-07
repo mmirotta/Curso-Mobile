@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Solicitar Turno</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="fondo">
+  <ion-item>
+    <ion-label color="primary" stacked style="font-size: 1.3rem">Día</ion-label>
+    <ion-datetime displayFormat="DD/MMM/YYYY" [(ngModel)]="dia"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" stacked style="font-size: 1.3rem">Horario</ion-label>
+    <ion-select [(ngModel)]="horario" cancelText="Cerrar"  style="max-width:100%; width:100%">
+        <ion-option value="08:00">08:00</ion-option>
+        <ion-option value="08:30">08:30</ion-option>
+        <ion-option value="09:00">09:00</ion-option>
+        <ion-option value="09:30">09:30</ion-option>
+        <ion-option value="10:00">10:00</ion-option>
+        <ion-option value="10:30">10:30</ion-option>
+        <ion-option value="11:00">11:00</ion-option>
+        <ion-option value="11:30">11:30</ion-option>
+        <ion-option value="12:00">12:00</ion-option>
+        <ion-option value="12:30">12:30</ion-option>
+        <ion-option value="13:00">13:00</ion-option>
+        <ion-option value="14:00">14:00</ion-option>
+        <ion-option value="14:30">14:30</ion-option>
+        <ion-option value="15:00">15:00</ion-option>
+        <ion-option value="15:30">15:30</ion-option>
+        <ion-option value="16:00">16:00</ion-option>
+        <ion-option value="16:30">16:30</ion-option>
+        <ion-option value="17:00">17:00</ion-option>
+        <ion-option value="17:30">17:30</ion-option>
+        <ion-option value="18:00">18:00</ion-option>
+        <ion-option value="18:30">18:30</ion-option>
+        <ion-option value="19:00">19:00</ion-option>
+        <ion-option value="19:30">19:30</ion-option>
+        <ion-option value="20:00">20:00</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" stacked style="font-size: 1.3rem">Servicio</ion-label>
+    <ion-select [(ngModel)]="servicio" cancelText="Cerrar"  style="max-width:100%; width:100%">
+        <ion-option value="Corte Hombre">Corte Hombre</ion-option>
+        <ion-option value="Corte Mujer">Corte Mujer</ion-option>
+        <ion-option value="Color Hombre">Color Hombre</ion-option>
+        <ion-option value="Color Mujer">Color Mujer</ion-option>
+        <ion-option value="Recorte Barba">Recorte Barba</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" stacked style="font-size: 1.3rem">Peluquero</ion-label>
+    <ion-select [(ngModel)]="peluquero" cancelText="Cerrar"  style="max-width:100%; width:100%">
+        <ion-option value="Oscar">Oscar</ion-option>
+        <ion-option value="Carla">Carla</ion-option>
+        <ion-option value="Gabriel">Gabriel</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-footer>
+    <ion-toolbar style="text-align: right">
+      <button ion-button round color="primary" (click)="Reservar()">Reservar</button>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>

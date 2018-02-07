@@ -7,16 +7,22 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { RegistroPage } from '../pages/registro/registro';
+import { TurnoPage } from '../pages/turno/turno';
+import { ServicioPage } from '../pages/servicio/servicio';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { VerTurnosPage } from '../pages/ver-turnos/ver-turnos';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     LoginPage,
-    RegistroPage
+    RegistroPage, 
+    TurnoPage,
+    ServicioPage,
+    VerTurnosPage
   ],
   imports: [
     BrowserModule,
@@ -33,7 +39,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     LoginPage,
-    RegistroPage
+    RegistroPage,
+    TurnoPage,
+    ServicioPage,
+    VerTurnosPage
   ],
   providers: [
     StatusBar,

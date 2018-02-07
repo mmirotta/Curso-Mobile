@@ -37,10 +37,12 @@ export class LoginPage {
           duration: 3000
         });
         loader.present().then(x => { 
-          usuario.logueado = true;
-          this.storage.set(usuario.email, JSON.stringify(usuario));
-          this.storage.set("logueado", usuario.email);
-          this.navCtrl.setRoot(HomePage);
+          setTimeout(() => {
+            usuario.logueado = true;
+            this.storage.set(usuario.email, JSON.stringify(usuario));
+            this.storage.set("logueado", usuario.email);
+            this.navCtrl.setRoot(HomePage);
+          }, 4000);
         });
       }else{
         let toast = this.toastCtrl.create({

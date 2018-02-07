@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Reservas</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="fondo">
+  <ion-card>
+    <ion-card-content style="padding: 0">
+      <ion-item>
+        <ion-label>Mis reservas</ion-label>
+        <ion-checkbox color="primary" [(ngModel)]="misTurnos"></ion-checkbox>
+      </ion-item>
+      <ion-item *ngIf="!misTurnos">
+        <ion-label color="primary" stacked style="font-size: 1.3rem">Día</ion-label>
+        <ion-datetime displayFormat="DD/MMM/YYYY" [(ngModel)]="dia"></ion-datetime>
+      </ion-item>
+      <ion-item *ngIf="!misTurnos">
+        <ion-label color="primary" stacked style="font-size: 1.3rem">Peluquero</ion-label>
+        <ion-select [(ngModel)]="peluquero" cancelText="Cerrar" style="max-width:100%; width:100%">
+          <ion-option value="Oscar">Oscar</ion-option>
+          <ion-option value="Carla">Carla</ion-option>
+          <ion-option value="Gabriel">Gabriel</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-buttons end >
+        <button ion-button icon-only (click)="Limpiar()" *ngIf="!misTurnos">
+          <ion-icon name="md-trash"></ion-icon>
+        </button>
+        <button ion-button icon-only (click)="Buscar()">
+          <ion-icon name="md-search"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngFor="let t of turnosBuscados">
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12>
+            <p style="font-size: 1.3rem; color:#fe5e16; font-weight: bold">{{t.usuario}}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6>
+            <p style="font-size: 1.2rem">{{t.servicio}}</p>
+          </ion-col>
+          <ion-col col-6 style="text-align: right">
+            <p style="font-size: 1.1rem; font-weight: bold">$ {{ t.precio }}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row *ngIf="misTurnos">
+            <ion-col col-6>
+                <p style="font-size: 1.2rem">Peluquero</p>
+              </ion-col>
+              <ion-col col-6 style="text-align: right">
+                <p style="font-size: 1.1rem; color:#fe5e16; font-weight: bold">{{ t.peluquero }}</p>
+              </ion-col>
+          </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngIf="sinResultados">
+    <ion-card-content>
+        <p style="font-size: 1.1rem; font-weight: bold">{{ mensaje }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

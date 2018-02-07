@@ -8,34 +8,66 @@
 </ion-header>
 
 <ion-content>
-    <div padding>
-        <ion-segment [(ngModel)]="pet">
-          <ion-segment-button value="servicios">
-              SERVICIOS
-          </ion-segment-button>
-          <ion-segment-button value="comentarios">
-              COMENTARIOS
-          </ion-segment-button>
-          <ion-segment-button value="informacion">
-              INFORMACIÓN
-          </ion-segment-button>
-        </ion-segment>
-      </div>
-      
-      <div [ngSwitch]="pet">
-        <ion-list *ngSwitchCase="'servicios'">
-          <ion-item>
-          </ion-item>
-        </ion-list>
-      
-        <ion-list *ngSwitchCase="'comentarios'">
-          <ion-item>
-          </ion-item>
-        </ion-list>
+  <div padding>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="servicios">
+        SERVICIOS
+      </ion-segment-button>
+      <ion-segment-button value="comentarios">
+        COMENTARIOS
+      </ion-segment-button>
+      <ion-segment-button value="informacion">
+        INFORMACIÓN
+      </ion-segment-button>
+    </ion-segment>
+  </div>
 
-        <ion-list *ngSwitchCase="'informacion'">
-          <ion-item>
-          </ion-item>
-        </ion-list>
-      </div>
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'servicios'">
+      <ion-item>
+        <ion-card *ngFor="let s of servicios" (click)="verServicio(s)" >
+          <ion-card-content style="padding: 0">
+              <ion-grid>
+                <ion-row>
+                  <ion-col col-12>
+                  <p style="color:#fe5e16; font-weight: bold">{{ s.nombre }}</p>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col col-6>
+                    <p style="font-size: 1.2rem"> <ion-icon name="md-timer"></ion-icon>{{ s.tiempo }}</p>
+                  </ion-col>
+                  <ion-col col-6 style="text-align: right">
+                    <p style="font-size: 1.2rem; color:#fe5e16; font-weight: bold">$ {{ s.precio }}</p>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'comentarios'">
+      <ion-item>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'informacion'">
+      <ion-item>
+          <ion-card>
+              <img src="../assets/imgs/images.jpg"/>
+              <ion-card-content>
+                <ion-card-title>
+                  Cortarte Peluquería
+                </ion-card-title>
+                <p>Cortarte Peluquería es un salón especializado en correcciones de color, diseño de color, cortes de vanguardia, barberia. Todos nuestros servicios están dotados de las últimas técnicas desarrolladas a nivel mundial . Trabajamos exclusivamente con productos de primera línea buscando lo mejor para vos.
+                </p>
+                <p>
+                  Dirección: Murguiondo 4299, Villa Lugano.
+                </p>
+              </ion-card-content>
+            </ion-card>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>
